@@ -8,5 +8,10 @@ export type Todo = {
   id: string;
   completed: boolean;
   text: string;
-  createdAt: number;
+  created_at: number;
+  user_id: string;
+};
+
+export type User = {
+  id: string;
 };

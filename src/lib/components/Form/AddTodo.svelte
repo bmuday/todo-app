@@ -1,10 +1,10 @@
 <script>
+	import { user } from "$lib/stores/auth";
 	import { addTodo } from "$lib/stores/todos";
-
     let todo = ""
 
     const handleSubmit = () => {
-        addTodo(todo)
+        if($user) addTodo(todo, $user.id)
         todo = ""
     }
 </script>
