@@ -6,9 +6,9 @@ export type TodoStore = {
 
 export type Todo = {
   id: string;
+  created_at: number;
   completed: boolean;
   text: string;
-  created_at: number;
   user_id: string;
 };
 

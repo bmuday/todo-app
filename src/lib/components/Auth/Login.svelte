@@ -8,7 +8,6 @@
     const handleLogin = async () => {
         try {
         loading = true
-        console.log("email", email)
         const {error} = await supabase.auth.signInWithPassword({email, password}) 
         if(error) throw error
         } catch (error) {
@@ -20,7 +19,7 @@
 </script>
 
 <h1 class="text-2xl font-bold text-center text-gray-800 md:text-3xl">Log In</h1>
-<p class="mt-2 text-center">Sign In via magic link with your email below.</p>
+<p class="mt-2 text-center">Sign In with your email below.</p>
 <form on:submit|preventDefault={handleLogin}>
     <div class="flex flex-col mb-2 text-sm">
         <label for="email" class="mb-2 font-bold text-gray-800">Email</label>

@@ -4,7 +4,6 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 	import { user } from '$lib/stores/auth';
 	import { loadTodos } from '$lib/stores/todos';
-	import { onMount } from 'svelte';
 	import '../app.css';
 
 	supabase.auth.onAuthStateChange((_, session) => {
