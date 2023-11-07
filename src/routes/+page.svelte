@@ -1,6 +1,6 @@
 <script>
-    import AddTodo from "$lib/components/Form/AddTodo.svelte";
-	import TodosList from "$lib/components/Todo/List.svelte";
+    import AddTodo from "../components/Form/AddTodo.svelte";
+	import TodosList from "../components/Todo/List.svelte";
 </script>
 
 <main>

@@ -1,7 +1,7 @@
 <script>
 	import { supabase } from '$lib';
-	import Login from '$lib/components/Auth/Login.svelte';
-	import Navbar from '$lib/components/Navbar.svelte';
+	import Login from '../components/Auth/Login.svelte';
+	import Navbar from '../components/Navbar.svelte';
 	import { user } from '$lib/stores/auth';
 	import { loadTodos } from '$lib/stores/todos';
 	import '../app.css';
