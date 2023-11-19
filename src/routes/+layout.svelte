@@ -1,19 +1,11 @@
 <script>
-	import { supabase } from '$lib';
 	import Login from '../components/Auth/Login.svelte';
 	import Navbar from '../components/Navbar.svelte';
 	import { user } from '$lib/stores/auth';
-	import { loadTodos } from '$lib/stores/todos';
 	import '../app.css';
+	import { checkUser } from '../hooks/utils';
 
-	supabase.auth.onAuthStateChange((_, session) => {
-		
-		if(session?.user) {
-			console.log("user", session.user)
-			user.set(session.user)
-			loadTodos(session.user.id)
-		}
-	})
+	$: checkUser()
 	
 </script>
 
